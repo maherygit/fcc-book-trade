@@ -1,0 +1,24 @@
+.navbar_container {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
+.navbar_btn{
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  background: transparent;
+  border : none;
+  color: #4bacb8;
+  font-weight: bold;
+  min-width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.navbar_btn:hover{
+  cursor: pointer;
+  border-bottom: 2px solid #4bacb8;
+}

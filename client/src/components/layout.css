@@ -1,0 +1,25 @@
+.layout_container {
+  padding: 15px;
+}
+
+.layout_header {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.layout_main{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.layout_main_center {
+  flex: 4;
+  padding: 7px;
+}
+
+.layout_main_right_col{
+  flex: 1;
+}
