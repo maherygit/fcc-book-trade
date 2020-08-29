@@ -1,0 +1,42 @@
+.userLogin_container {
+  display: block;
+  width: 300px;
+  padding: 0 0 7px 0;
+  border-radius: 7px;
+  /*background-color: #b2ebf2;*/
+  border: 1px solid #81b9bf;
+}
+
+.userLogin_login_way{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0px;
+  border-bottom: 1px solid #4bacb8;
+  cursor: pointer;
+}
+
+.userLogin_main{
+   width: 100%;
+}
+
+
+
+.userLogin_way_item {
+  padding: 7px;
+  width: 50%;
+}
+
+.userLogin_way_item.active {
+  background-color: #81b9bf;
+  color: white;
+}
+
+.userLogin_way_item:first-child {
+  border-right: 1px solid #81b9bf;
+  border-radius: 7px 0px 0px 0px;
+}
+
+.userLogin_way_item:last-child {
+  border-radius: 0px 7px 0px 0px;
+}

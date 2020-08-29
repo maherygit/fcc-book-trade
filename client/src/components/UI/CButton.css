@@ -1,0 +1,59 @@
+.cbutton {
+	box-shadow:inset 0px 1px 0px 0px white;
+	border-radius:3px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+}
+
+.cbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.cbutton.primary{
+  background: linear-gradient(to bottom, var(--color-primary) 5%, var(--color-primary-dark) 100%);
+  background-color:var(--color-primary);
+  border:1px solid var(--color-primary-dark);
+  color: white;
+}
+.cbutton.primary:hover {
+	background:linear-gradient(to bottom, var(--color-primary-dark) 5%, var(--color-primary) 100%);
+	background-color: var(--color-primary-dark);
+}
+  
+.cbutton.secondary{
+  background:linear-gradient(to bottom, var(--color-secondary) 5%, var(--color-secondary-dark) 100%);
+  background-color:var(--color-secondary);
+  border:1px solid var(--color-secondary-dark);
+  color: white;
+}
+.cbutton.secondary:hover{
+  background:linear-gradient(to bottom, var(--color-secondary-dark) 5%, var(--color-secondary) 100%);
+  background-color:var(--color-secondary-dark);
+  color: white;
+}
+
+.cbutton.danger{
+  background:linear-gradient(to bottom, var(--color-danger) 5%, var(--color-danger-dark) 100%);
+  background-color:var(--color-danger);
+  border:1px solid var(--color-danger-dark);
+  color: white;
+}
+
+.cbutton.danger:hover {
+	background:linear-gradient(to bottom, var(--color-danger-dark) 5%, var(--color-danger) 100%);
+	background-color:var(--color-danger-dark);
+}
+
+.cbutton__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
