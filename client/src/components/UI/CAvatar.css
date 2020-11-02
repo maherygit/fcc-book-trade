@@ -1,0 +1,24 @@
+.avatar_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar_mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: teal;
+    color: firebrick;
+    border: 2px solid whitesmoke;
+    overflow: hidden;
+}
+.avatar_image {
+    display: inline-block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

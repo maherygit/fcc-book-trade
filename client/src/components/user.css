@@ -1,0 +1,50 @@
+.user__container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.user__container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.user__header {
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(#a4d0e7,#a4d0e7) no-repeat;
+    background-size: 100% 50%;
+}
+
+.user__avatar {
+    height: 60px;
+    width: 60px;
+    margin: 10px auto;
+}
+
+.user_login--name {
+    font-family: cursive;
+    font-size: 16px;
+    color: #808080;
+}
+
+.user__container h2 {
+    font-size: 0.5rem;
+    color: teal;
+    padding-bottom: 4px;
+    width: auto;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.user__login-information {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #b1b0b0;
+}
+

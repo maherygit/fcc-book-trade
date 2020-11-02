@@ -9,7 +9,7 @@ const Books = props => {
       <ul className="books_list">
       {
        (bookList && bookList.length > 0) && 
-         bookList.map((book,i) => <BookItem title={book.title} author={book.author} />)
+         bookList.map((book,i) => <BookItem key={i} title={book.title} author={book.author} />)
       }
       </ul>
     </div>

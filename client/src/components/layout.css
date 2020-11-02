@@ -1,5 +1,7 @@
 .layout_container {
   padding: 15px;
+  max-width: 1440px;
+  background-color: #f0f3f7;
 }
 
 .layout_header {

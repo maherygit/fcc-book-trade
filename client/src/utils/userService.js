@@ -4,7 +4,7 @@ import apiCall from './apiService';
 const getUsers = async () => {
   let users = null;
   try{
-    users = await apiCall.get("/users");
+    users = await apiCall.get("/users/");
     console.log("apiCall - users list get");
     return users.data.users;
   } catch(err){
@@ -29,10 +29,10 @@ const getUserById = async (userid) => {
 };
 
 
-const registerUser = async ( email, password ) => {
+const registerUser = async ( email, password, name ) => {
   let user = null;
   try {
-    user =  await apiCall.post('/users/register', { email, password });
+    user =  await apiCall.post('/users/register', { email, password, name });
     console.log("registerUser back ", JSON.stringify(user));
     return { user };
   } catch (err){

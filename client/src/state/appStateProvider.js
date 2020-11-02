@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext, useReducer, createContext } from 'react';
 import { mainReducer, mainInitialState, action } from './mainReducer';
 
-export const SateContext = React.createContext();
+export const SateContext = createContext();
 
 const clearMessage = {kind: 'info', message: ''};
 

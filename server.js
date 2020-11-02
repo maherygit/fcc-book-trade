@@ -1,3 +1,6 @@
+require('dotenv').config();
+const cors = require('cors') 
+
 // server.js
 // where your node app starts
 
@@ -23,6 +26,7 @@ app.get("/", function(request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
 */
+app.use(cors())
 
 routeApp(app);
 

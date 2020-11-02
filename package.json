@@ -7,10 +7,12 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "cd client && npm run build"
+    "start": "nodemon server.js",
+    "build": "cd client && npm run build",
+    "serve": "yarn build && yarn start"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.0",
@@ -27,5 +29,9 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
 }

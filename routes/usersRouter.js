@@ -56,7 +56,8 @@ router.post('/register', async (req, res) => {
       // create a new user
       const registeringUser = new User({
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        name: req.body.name || ""
       });
       registeringUser.save((err, savedUser) => {
         if (err) {
@@ -76,7 +77,47 @@ router.post('/register', async (req, res) => {
   }
 });
 
-
+// register user
+router.put('/register/:id', async (req, res) => {
+  // TODO check the validity of email and password
+  try{
+    console.log("registering : ", req.body)
+    // search if user alreadt exists
+    User.find({ email: req.body.email }, (err, users) => {
+      if(err){
+        const mess = 'an error occured while registering user (find existing)';
+        console.log(mess);
+        return res.status(500).json({ error : mess});
+      }
+      // user already exist
+      if(users.length > 0){
+        const mess = 'User already exists';
+        console.log(mess);
+        return res.status(500).json({ error : 'User already exists'});
+      }
+      // create a new user
+      const registeringUser = new User({
+        email: req.body.email,
+        password: req.body.password,
+        name: req.body.name || ""
+      });
+      registeringUser.save((err, savedUser) => {
+        if (err) {
+          const mess = 'Error while saving the user in db'
+          console.log(mess);
+          return res.status(500).json({ error : mess});
+        }
+        console.log("user saved!");
+        console.log("generating a token for the user");
+        const token = jwtAPI.getToken({ email : savedUser.email });
+        savedUser.token = token;
+        return res.status(200).json(savedUser);
+      });
+    });
+  } catch(err){
+    console.log(err.stack);
+  }
+});
 
 
 

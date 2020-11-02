@@ -3,6 +3,11 @@ import userService from '../utils/userService';
 import { useStateValue } from '../state/appStateProvider';
 import CButton from './UI/CButton'
 
+import User from './user'
+
+
+import './users.css';
+
 const Users = (props) => {
   const [users, setUsers] = useState([]);
   const [,setFlashMessage] = useStateValue().flash;
@@ -41,9 +46,8 @@ const Users = (props) => {
       <h1> Users </h1>
       <ul className="users_list">
         {
-          (users && (users.length > 0))
-          && users.map((user,i) => (<li key={i} className="user_item"> { JSON.stringify(users) } </li>))  
-          (users && users.length <= 0) && (<p>"No users"</p>)
+          (users && (users.length > 0)) &&
+            users.map((user,i) => (<li key={i} className="user_item"> <User email={user.email} password={user.password} name={user.name}/> </li>))
         }
       </ul>
     </div>

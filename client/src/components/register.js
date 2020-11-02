@@ -8,7 +8,7 @@ import CButton from './UI/CButton'
 
 import './registerForm.css';
 
-const emptyFields = {email: "", password: ""}; 
+const emptyFields = {email: "", password: "", name: ""}; 
 
 const Register = (props) => {
   const [registerInfos, setRegisterInfos] = useState({...emptyFields});
@@ -32,12 +32,23 @@ const Register = (props) => {
     
     res = validateTextField(registerInfos.password, 5, 10);
     console.log("password valid ", res)
+
     if( res.error )  { 
       console.log("password has error")
       hasError = true;
       errorMessages.password = res.error;
     }
+
+    res = validateTextField(registerInfos.name, 2, 30);
+    console.log("name valid ", res)
+
+    if( res.error )  { 
+      console.log("name has error")
+      hasError = true;
+      errorMessages.name = res.error;
+    }
     
+
     if(hasError) {
       return { error : errorMessages };
     }
@@ -52,7 +63,7 @@ const Register = (props) => {
     console.log("*****", resValidate)
     if(!resValidate.error) {
       // post register infos to backend
-      const {user, error} = await userService.registerUser(registerInfos.email, registerInfos.password);
+      const {user, error} = await userService.registerUser(registerInfos.email, registerInfos.password, registerInfos.name);
       setFlashMessage({kind: 'info', message: "registering sent"});
 
       if(error) {
@@ -63,7 +74,7 @@ const Register = (props) => {
         setRegError({...emptyFields, register: ""});
         setRegisterInfos({...emptyFields});
         setFlashMessage({kind: 'success', message: "Registering succeeded"})
-        dispatch(action.login(user))
+        dispatch(action.login(user.data))
       }
     } else {
       setRegError({...resValidate.error, register: ""});
@@ -73,6 +84,13 @@ const Register = (props) => {
   return (
     <div className="register_form_container">
       <div className="register_form">
+        <label htmlFor='name'>  
+          <input type="text" id="name" name="name" value={registerInfos.name} onChange={handleInput} placeholder=" "/>
+          <span className='label'>Name</span>
+          <span className='border'></span>
+          { regError.name && <p style={{color: "red"}}> {regError.name} </p> }
+        </label>
+
         <label htmlFor='email'>  
           <input type="text" id="email" name="email" value={registerInfos.email} onChange={handleInput} placeholder=" "/>
           <span className='label'>Email</span>

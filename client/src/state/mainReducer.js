@@ -4,7 +4,7 @@ export const mainInitialState = {
   user : userInitialState
 }
 
-export const mainReducer = ( state , action ) => {
+export const mainReducer = ( state=mainInitialState , action ) => {
   console.log("mainReducer ", state);
   return {
     user : userReducer( state.user, action)

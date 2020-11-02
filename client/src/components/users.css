@@ -1,0 +1,14 @@
+.users_toolbar {
+    margin-bottom: 20px;
+}
+
+.users_list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.user_item {
+    margin: 20px;
+    min-width: 220px;
+}
