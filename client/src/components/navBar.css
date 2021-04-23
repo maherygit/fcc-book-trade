@@ -1,21 +1,18 @@
 .navbar_container {
-  background-color: var(--color-success);
+  display: flex;
+  background-color: var(--primary-color);
   width: 100%;
 }
 
 .navbar_btn{
+  display: flex;
+  text-decoration: none;
   cursor: pointer;
-  border: none;
-  border-radius: 3px;
-  padding: 4px 10px;
-  background: transparent;
-  border : none;
-  color: #4bacb8;
+  color: white;
   font-weight: bold;
-  min-width: 70px;
-  height: 30px;
-  margin-top: 10px;
   font-size: 16px;
+  min-width: 70px;
+  padding: 10px;
 }
 
 .navbar_btn:hover{
