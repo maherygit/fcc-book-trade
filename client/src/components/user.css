@@ -1,12 +1,14 @@
 .user__container {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr;
+    position: relative;
+    text-align: center;    
     width: 100%;
     height: 250px;
     border-radius: 8px;
     padding: 0;
-    background-color: white;
-    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -22,7 +24,7 @@
     justify-content: center;
     position: relative;
     border-radius: 8px 8px 0 0;
-    background: linear-gradient(#a4d0e7,#a4d0e7) no-repeat;
+    background: linear-gradient(rgba(76, 60, 255, 0.25),rgba(235, 6, 235, 0.25)) no-repeat;
     background-size: 100% 50%;
 }
 

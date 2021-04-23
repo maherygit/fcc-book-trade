@@ -1,7 +1,7 @@
 .layout_container {
   padding: 15px;
   max-width: 1440px;
-  background-color: #f0f3f7;
+  background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
 }
 
 .layout_header {
