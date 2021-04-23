@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 
 import NavBar from './navBar';
 import UserLogin from './userLogin';

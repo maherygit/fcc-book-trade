@@ -20,7 +20,7 @@ const User = ({
     <div className='user__container'>
       <div className='user__header'>
         <div className="favoris">{"favorite"}</div>
-        <Avatar className='user__avatar' image={image}/>
+        <Avatar className='user__avatar' image={image.default}/>
         <h3 className="user_login--name">{name}</h3>
       </div>
       <section className='user__login-information'>
