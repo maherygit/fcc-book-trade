@@ -1,4 +1,6 @@
 .user__container {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
     width: 100%;
     height: 250px;
     border-radius: 8px;
@@ -14,6 +16,10 @@
 }
 
 .user__header {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
     position: relative;
     border-radius: 8px 8px 0 0;
     background: linear-gradient(#a4d0e7,#a4d0e7) no-repeat;
@@ -23,7 +29,6 @@
 .user__avatar {
     height: 60px;
     width: 60px;
-    margin: 10px auto;
 }
 
 .user_login--name {
@@ -46,5 +51,11 @@
     flex-direction: column;
     padding: 10px;
     color: #b1b0b0;
+}
+
+.user__trade-information {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
