@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import userService from '../utils/userService';
-import { validateTextField } from '../utils/fieldValidation';
+import userService from '../../utils/userService';
+import { validateTextField } from '../../utils/fieldValidation';
 
 import './registerForm.css';
 

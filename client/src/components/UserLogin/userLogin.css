@@ -1,18 +1,18 @@
 .userLogin_container {
-  display: block;
+  display: grid;
   width: 300px;
   padding: 0 0 7px 0;
   border-radius: 7px;
-  /*background-color: #b2ebf2;*/
-  border: 1px solid #81b9bf;
+  border: 1px solid var(--primary-color);
+  grid-template-rows: 40px 1fr;
+  background-color: rgba(var(--color-white-rgb), 0.7);
 }
 
 .userLogin_login_way{
-  display: flex;
+  display: block;
   width: 100%;
-  justify-content: space-evenly;
   padding: 0px;
-  border-bottom: 1px solid #4bacb8;
+  border-bottom: 1px solid var(--primary-color);
   cursor: pointer;
 }
 
@@ -20,15 +20,18 @@
    width: 100%;
 }
 
-
-
 .userLogin_way_item {
+  display: inline-block;
   padding: 7px;
+  text-align: center;
+  height: 100%;
   width: 50%;
+  line-height: 23px;
+  color: var(--primary-color);
 }
 
 .userLogin_way_item.active {
-  background-color: #81b9bf;
+  background-color: rgba(var(--primary-color-rgb), 0.75);
   color: white;
 }
 

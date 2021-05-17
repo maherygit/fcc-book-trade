@@ -16,6 +16,9 @@
   --color-danger-rgb: 220,53,69;
   --color-danger-dark: #ba0214;
   --color-danger-dark-rgb: 186,2,20;
+  /* palette */
+  --color-white: #FFFF;
+  --color-white-rgb: 255, 255, 255;
 }
 
 *{

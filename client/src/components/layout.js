@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavBar from './navBar';
-import UserLogin from './userLogin';
+import UserLogin from './UserLogin/userLogin';
 import Books from './books';
 import Users from './users';
 import Alert from './UI/CAlert'

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Redirect} from 'react-router-dom';
 
-import userService from '../utils/userService';
-import { validateTextField } from '../utils/fieldValidation';
-import { useStateValue } from '../state/appStateProvider';
-import CButton from './UI/CButton'
+import userService from '../../utils/userService';
+import { validateTextField } from '../../utils/fieldValidation';
+import { useStateValue } from '../../state/appStateProvider';
+import CButton from '../UI/CButton'
 
 import './registerForm.css';
 

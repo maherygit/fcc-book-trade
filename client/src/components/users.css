@@ -11,4 +11,9 @@
 .user_item {
     margin: 20px;
     min-width: 220px;
+    transition: all 200ms ease;
+}
+
+.user_item:hover {
+    transform: translateY(-1px);
 }
