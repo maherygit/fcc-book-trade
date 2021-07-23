@@ -5,6 +5,7 @@
 }
 
 .navbar_btn {
+  z-index: 0;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -20,6 +21,7 @@
 
 .navbar_btn:after,
 .navbar_btn:before {
+  z-index: -1;
   position: absolute;
   left: 0;
   right: 0;
@@ -27,7 +29,7 @@
   display: block;
   height: 0px;
   background-color: rgba(var(--primary-color-rgb), 0.5);
-  transition: all 200ms ease-out;
+  transition: all var(--btn-transition-duration) ease-out;
 }
 
 .navbar_btn:after {
@@ -37,7 +39,11 @@
   top: 0;
 }
 
+.navbar_btn:hover {
+  color: var(--color-success);
+}
+
 .navbar_btn:hover:after,
 .navbar_btn:hover:before {
-  height: 10px;
+  height: 50%;
 }

@@ -29,10 +29,10 @@ const Layout = props => {
               </Alert>)
               }
               <Switch>
-                  <Route path="/users/index">
+                  <Route path="/users">
                     <Users />
                   </Route>
-                  <Route path="/books/index">
+                  <Route path="/books">
                     <Books />
                   </Route>                    
                   <Route>

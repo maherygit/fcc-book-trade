@@ -15,11 +15,11 @@
   padding: 10px;
   display: flex;
   justify-content: space-between; 
+  flex-wrap: wrap-reverse;
 }
 
 .layout_main_center {
   flex: 4;
-  padding: 7px;
 }
 
 .layout_main_right_col{

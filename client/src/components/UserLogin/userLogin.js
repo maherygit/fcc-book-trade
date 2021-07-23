@@ -24,7 +24,7 @@ const UserLogin = (props) => {
       <div className="userLogin_main">
       {
         (selected === "register")? 
-        <Register />
+        <Register afterLogin='/users' />
           :
         <Login />
       }

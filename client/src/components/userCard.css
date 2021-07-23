@@ -5,10 +5,9 @@
     text-align: center;    
     width: 100%;
     height: 250px;
+    overflow: hidden;
     border-radius: 8px;
     padding: 0;
-    background-color: rgba(255,255,255,0.5);
-    backdrop-filter: blur(10px);    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -17,7 +16,16 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.user__background {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 0 ;
+}
+
 .user__header {
+    z-index: 1 ;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     align-items: center;
@@ -29,11 +37,13 @@
 }
 
 .user__avatar {
+    z-index: 1 ;
     height: 60px;
     width: 60px;
 }
 
 .user_login--name {
+    z-index: 1 ;
     font-family: cursive;
     font-size: 16px;
     color: #808080;
@@ -49,6 +59,7 @@
 }
 
 .user__login-information {
+    z-index: 1 ;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -56,6 +67,7 @@
 }
 
 .user__trade-information {
+    z-index: 1 ;
     display: flex;
     flex-direction: column;
     padding: 10px;

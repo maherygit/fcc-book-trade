@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Redirect} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 import userService from '../../utils/userService';
 import { validateTextField } from '../../utils/fieldValidation';
@@ -14,7 +14,8 @@ const Register = (props) => {
   const [registerInfos, setRegisterInfos] = useState({...emptyFields});
   const [regError, setRegError] = useState({...emptyFields, register: ""});
   const { state: [, dispatch], action, flash: [, setFlashMessage] } = useStateValue();
-   
+  let history = useHistory();
+
   const handleInput = evt => {
       setRegisterInfos( { ...registerInfos, [evt.target.name] : evt.target.value } );    
   }
@@ -75,6 +76,7 @@ const Register = (props) => {
         setRegisterInfos({...emptyFields});
         setFlashMessage({kind: 'success', message: "Registering succeeded"})
         dispatch(action.login(user.data))
+        return history.push(props.afterLogin)
       }
     } else {
       setRegError({...resValidate.error, register: ""});

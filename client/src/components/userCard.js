@@ -1,5 +1,5 @@
 import React from 'react';
-import './user.css';
+import './userCard.css';
 
 import Avatar from './UI/CAvatar';
 
@@ -39,6 +39,7 @@ const User = ({
           requests: <span>{requests}</span>
         </span>
       </section>
+      <div className="user__background"/>
     </div>
   );
 };

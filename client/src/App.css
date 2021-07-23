@@ -19,6 +19,8 @@
   /* palette */
   --color-white: #FFFF;
   --color-white-rgb: 255, 255, 255;
+  /* transitions */
+  --btn-transition-duration: 200ms;
 }
 
 *{

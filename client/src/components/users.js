@@ -3,7 +3,7 @@ import userService from '../utils/userService';
 import { useStateValue } from '../state/appStateProvider';
 import CButton from './UI/CButton'
 
-import User from './user'
+import User from './userCard'
 
 
 import './users.css';
